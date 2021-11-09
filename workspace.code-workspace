@@ -1,0 +1,21 @@
+{
+    "folders": [
+		{
+			"path": "."
+		}
+	],
+    "settings": {
+        "java.project.referencedLibraries": [
+            "lib/**/*.jar",
+            "jgenderize/jaxrs-ri/ext/jakarta.ws.rs-api-3.0.0-sources.jar",
+            "jgenderize/jaxrs-ri/**/*.jar",
+            "/home/parfait/Programming/Java/junit-platform-launcher-1.8.0-M1.jar",
+            "/home/parfait/Programming/Java/junit-jupiter-api-5.8.0-M1.jar",
+            "commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-tests.jar",
+            "commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-test-sources.jar",
+            "commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar",
+            "commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-javadoc.jar",
+            "commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4.jar"
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "jgenderize/javax.ws.rs-api-2.1.1.jar",
+        "/home/parfait/Programming/Java/junit-jupiter-api-5.8.0-M1.jar",
+        "jgenderize/jakarta.ws.rs-api-3.0.0.jar",
+        "jgenderize/jersey-common-3.0.2.jar",
+        "jgenderize/jersey-client-3.0.2.jar",
+        "jgenderize/jaxrs-ri/**/*.jar",
+        "commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4.jar"
+    ]
+}
