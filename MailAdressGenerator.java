@@ -50,6 +50,7 @@ public class MailAdressGenerator {
                         Genderize api = GenderizeIoAPI.create();
                         NameGender gender = api.getGender(stripAccents(completeFirstName.strip()));
                         String genderToAppend = gender.isMale() ? ",M" : ",F";
+                        System.out.println(al+" "+emailAddress+" "+genderToAppend);
                         try {
                             writer.append(al+","+emailAddress+",benin,"+birthdate+","+birthMonth+","+birthyear+genderToAppend+"\n");
                         } catch (IOException e) {

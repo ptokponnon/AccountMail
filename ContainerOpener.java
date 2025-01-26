@@ -2,7 +2,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -14,8 +13,8 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
 public class ContainerOpener {
-    static String country = "benin";
-    static int startIndex = 0;
+    static String country = "belgique";
+    static int startIndex = 115;
     static int nbInvite = 30;
     static int index;
     static int counter;
@@ -34,14 +33,13 @@ public class ContainerOpener {
             country = line.hasOption("c") ? line.getOptionValue("c") : country;
             startIndex = line.hasOption("i") ? Integer.parseInt(line.getOptionValue("i")) : startIndex;
             nbInvite = line.hasOption("n") ? Integer.parseInt(line.getOptionValue("n")) : nbInvite;
-            index = startIndex; counter = startIndex;
         } catch (ParseException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
         Path linksToOpen = Paths.get("/media/parfait/26040AFB040ACE2D/Images/ProfilsFB/resources/links.txt"),
-            containersToOpen = Paths.get("/media/parfait/26040AFB040ACE2D/Images/ProfilsFB/resources/containersToOpen.txt");
-        commandGenerator(containersToOpen, linksToOpen);
+            accountPath = Paths.get("/media/parfait/26040AFB040ACE2D/Images/ProfilsFB/resources/accounts.txt");
+        commandGenerator(accountPath, linksToOpen);
     }
 
     private static void commandGenerator(Path containersPath, Path linksPath) {
@@ -52,10 +50,37 @@ public class ContainerOpener {
         ) {
             containers = lines0.collect(Collectors.toList());
             links = lines1.collect(Collectors.toList());
+
+            index = 0; counter = 0;
+            int nbTotalAccount = containers.size();
+            /**
+             * counter tracks where to start printing
+             * index assure that the number of country account invites we get equals exactly nbInvite
+            */
+            while(index < startIndex) { // move the index up to startIndex
+                String[] values = containers.get(counter%nbTotalAccount).split(",");
+                if(values.length < 4) continue; // pass empty line
+                String accountCountry = values[3];
+                if(accountCountry.equals(country)) {
+                    index++;
+                }
+                counter++;
+            }
+
+            // Now index is equal to startIndex
             links.forEach(l -> {
-                containers.forEach(c-> {
-                    System.out.print("\"ext+container:name="+c+"&url="+l+"\" ");
-                });
+                while(index < startIndex + nbInvite) {
+                    String c = containers.get(counter%nbTotalAccount);
+                    String[] values = c.split(",");
+                    String containerName = values[0];
+                    String accountCountry = values[3];
+                    if(accountCountry.equals(country)) {
+                        System.out.print("\"ext+container:name="+containerName+"&url="+l+"\" ");
+                        index++;
+                    }
+                    counter++;
+                }
+                startIndex = index;   
             });
         } catch (IOException e) {
                 //TODO: handle exception

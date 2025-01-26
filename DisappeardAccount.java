@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 public class DisappeardAccount {
     public static void main(String[] args) throws IOException {
         Path accountPath0 = Paths.get("accounts.txt");
-        Path accountPath1 = Paths.get("container.txt");
+        Path accountPath1 = Paths.get("containers.txt");
         List<String> account0lLines;
         List<String> account1lLines;
         try (
