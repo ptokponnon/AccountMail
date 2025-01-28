@@ -453,7 +453,7 @@ Joël Loko,Yannick Diwo - Soule Daouda,joel.loko@pegozone.com,benin,25,mai,1996,
 Lirène Affo,Kärlînä Älëxôdíê,lirene.affo@mediabenin.com,benin,11,nov,1996,F
 Arsène Akapo,Yannick Diwo - Soule Daouda,arsene.akapo@allodfs.com,benin,14,jan,2002,M
 Credo Abiodun,Yannick Diwo - Soule Daouda,credo.abiodun@allodfs.com,benin,1,oct,2003,M
-Yvan Dedi,Yannick Diwo - Soule Daouda,yvan.dedi@pegozone.com,benin,18,déc,1998,M
+Yvan Dedi,Yannick Diwo - Soule Daouda,yvan.dedi@mediabenin.com,benin,18,déc,1998,M
 Mohamed Dandikoye,Yannick Diwo - Soule Daouda,mohamed.dandikoye@mediabenin.com,benin,15,août,1999,M
 Germain Otekpola,Sèbè Lamine Bamba,germain.otekpola@allodfs.com,benin,5,déc,1998,M
 Faouzane Issoufou,Sèbè Lamine Bamba,faouzane.issoufou@mediabenin.com,benin,5,fév,1998,M
@@ -461,12 +461,11 @@ Cédric Fagueyibo,Sèbè Lamine Bamba,cedric.fagueyibo@pegozone.com,benin,15,jan
 Eustache Akindé,Sèbè Lamine Bamba,eustache.akinde@allodfs.com,benin,20,mar,2003,M
 Sidoine Azonneffo,Sèbè Lamine Bamba,sidoine.azonneffo@allodfs.com,benin,26,avr,1996,M
 Gilbert Zinsou,Sèbè Lamine Bamba,gilbert.zinsou@mediabenin.com,benin,15,mai,1999,M
-Boris Morou,Sèbè Lamine Bamba,boris.morou@mediabenin.com,benin,12,jun,1997,M
+Boris Morou,Sèbè Lamine Bamba,boris.morou@allodfs.com,benin,12,jun,1997,M
 Jean Agossou,Sèbè Lamine Bamba,jean.agossou@allodfs.com,benin,15,jan,2003,M
 Olayide Halik,Sèbè Lamine Bambak,olayide.halik@allodfs.com,benin,21,mai,1997,M
 Constantin Fannou,Sèbè Lamine Bamba,constantin.fannou@allodfs.com,benin,11,août,2001,M
 Rosène Gnavossou,Kärlînä Älëxôdíê,rosene.gnavossou@pegozone.com,benin,24,nov,2003,F
-Gwladys Djoglo,Kärlînä Älëxôdíê,gwladys.djoglo@allodfs.com,benin,25,août,1996,F
 Charbel Gandjao,Sèbè Lamine Bamba,charbel.gandjao@allodfs.com,benin,9,oct,1996,M
 Richard Boloukpè,Ulrich le Lobikamois,richard.boloukpe@allodfs.com,benin,7,juil,2002,M
 Fréjus Dotonou,Ulrich le Lobikamois,frejus.dotonou@allodfs.com,benin,15,juil,1999,M

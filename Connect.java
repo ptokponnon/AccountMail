@@ -15,7 +15,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -47,6 +46,8 @@ public class Connect {
     static String containerOpenString = "";
     static String firefoxExec = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
     static String extContainerName = "\"ext+container:name=";
+             //creating a constructor of the Robot class  
+    static Robot robot;   
 
     public static void main(String[] args) throws IOException {
         // create the command line parser
@@ -88,12 +89,18 @@ public class Connect {
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-        Path accountPath = Paths.get("C:\\Users\\parfait\\Programming\\Account-Mail\\accounts.txt");
+        Path accountPath = Paths.get("C:\\Users\\parfait\\Programming\\AccountMail\\accounts.txt");
+        
+        try {
+            robot = new Robot();
+        } catch (AWTException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         sendGenerator(accountPath, urlToOpen);
     }
 
     private static void sendGenerator(Path accountPath, boolean urlToOpen) {
-        System.out.print("\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" -new-tab ");
         List<String> accounts;
         try (Stream<String> lines0 = Files.lines(accountPath);
         ) {
@@ -164,7 +171,7 @@ public class Connect {
                 System.out.println("\nnext start: "+ (counter + 2)); // In accounts.txt, the first account start with index = 2
             }
         } catch (IOException e) {
-                //TODO: handle exception
+            e.printStackTrace();
         }
     }
 
@@ -220,48 +227,30 @@ public class Connect {
     }      
 
     public static void click(int x, int y){
-        Robot bot;
-        try {
-            bot = new Robot();
-            bot.mouseMove(x, y);    
-            bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-            bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        } catch (AWTException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        robot.mouseMove(x, y);    
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
 
     public static void automate (String[] commands, String containerEmail) {
         try {
             Runtime.getRuntime().exec(commands);
-            TimeUnit.SECONDS.sleep(5); // the next loop should last 30 seconds times nbTab, that's 1/2 minutes * nbTab
-
-             //creating a constructor of the Robot class  
-            Robot robot = new Robot();   
-            
+            robot.delay(10000);       
             click(1047, 776); // agree cookies
-            Thread.sleep(1000);
+            robot.delay(3000);       
             click(1100, 250); // address field
-            Thread.sleep(2000);
+            robot.delay(3000);
             pasteText(containerEmail);
-            Thread.sleep(1000);
-            robot.keyPress(KeyEvent.VK_TAB);  
-            robot.keyRelease(KeyEvent.VK_TAB);    
-            Thread.sleep(1000);
-            pasteText("Goerte02");
-            robot.keyPress(KeyEvent.VK_TAB);  
-            robot.keyRelease(KeyEvent.VK_TAB);    
-            Thread.sleep(500);
-            robot.keyPress(KeyEvent.VK_TAB);  
-            robot.keyRelease(KeyEvent.VK_TAB);    
-            Thread.sleep(2000);
-            click(1170, 400);
-            Thread.sleep(1000);
-            click(1170, 400);
-            Thread.sleep(5000);
+            robot.delay(10000);
+            click(1200, 310);
+            // robot.delay(1000);
+            // click(1110, 340);
+            robot.delay(3000);
+            robot.keyPress(KeyEvent.VK_ENTER);  
+            robot.keyRelease(KeyEvent.VK_ENTER);  
+            robot.delay(5000);
 
-            } catch (InterruptedException | AWTException | IOException e) {
+        } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }

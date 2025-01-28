@@ -6,11 +6,19 @@
     "configurations": [
         {
             "type": "java",
+            "name": "InviteSender",
+            "request": "launch",
+            "mainClass": "InviteSender",
+            "args": "-n 10 -i 10 -c benin -u https://facebook.com",
+            "projectName": "AccountMail_c0a75267"
+        },
+        {
+            "type": "java",
             "name": "Connect",
             "request": "launch",
             "mainClass": "Connect",
-            "args": "-n 10 -i 0 -u https://facebook.com",
-            "projectName": "Account-Mail_5276d4f4"
+            "args": "-n 10 -i 454 -c benin -u https://facebook.com",
+            "projectName": "AccountMail_c0a75267"
         },
         {
             "type": "java",
