@@ -85,7 +85,7 @@ public class InviteSender {
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-        Path accountPath = Paths.get("C:\\Users\\parfait\\Programming\\Account-Mail\\accounts.txt");
+        Path accountPath = Paths.get("C:\\Users\\parfait\\Programming\\AccountMail\\accounts.txt");
         sendGenerator(accountPath, urlToOpen);
     }
 

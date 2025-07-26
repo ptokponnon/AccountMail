@@ -105,7 +105,7 @@ public class InviteSendRunner {
                                     .withZone(ZoneId.systemDefault());
 
         LocalDateTime ldt = LocalDateTime.now();
-        String logFileString = "C:\\Users\\parfait\\Programming\\Account-Mail\\logs"+formatter.format(ldt)
+        String logFileString = "C:\\Users\\parfait\\Programming\\AccountMail\\logs"+formatter.format(ldt)
                 .replace("/", "-").replace(":", "-")+".txt";
         logFile = Paths.get(logFileString);
         try {
@@ -116,8 +116,8 @@ public class InviteSendRunner {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Path accountPath = Paths.get("C:\\Users\\parfait\\Programming\\Account-Mail\\accounts.txt");
-        Path urlPath = Paths.get("C:\\Users\\parfait\\Programming\\Account-Mail\\urls.txt");
+        Path accountPath = Paths.get("C:\\Users\\parfait\\Programming\\AccountMail\\accounts.txt");
+        Path urlPath = Paths.get("C:\\Users\\parfait\\Programming\\AccountMail\\urls.txt");
         sendGenerator(accountPath, urlPath, urlToOpen);
     }
 

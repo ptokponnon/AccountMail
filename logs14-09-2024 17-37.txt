@@ -1,9 +1,0 @@
-Start Index, Invite Number, Tab Number, Next start, Duration (min), Vpn Server
-462, 0, 4, 464, 4, local
-464, 3, 6, 469, 5, ca-vpnserver
-469, 2, 7, 473, 5, local
-473, 3, 7, 478, 4, local
-478, 1, 6, 481, 4, local
-481, 2, 8, 485, 4, local
-485, 1, 4, 488, 4, fr-vpnserver
-488, 2, 5, 492, 4, de-vpnserver

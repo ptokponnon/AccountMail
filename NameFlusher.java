@@ -47,7 +47,7 @@ public class NameFlusher {
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-        Path namePath = Paths.get("names.txt");
+        Path namePath = Paths.get("followers.txt");
         nameGenerator(namePath);
     }
 

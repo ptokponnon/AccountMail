@@ -1,0 +1,1 @@
+Start Index, Invite Number, Tab Number, Next start, DurationProgram is terminating. Next start: 233 Counter: 238Program is terminating. Next start: 233 Counter: 249Program is terminating. Next start: 2 Counter: 12Program is terminating. Next start: 711 Counter: 709Program is terminating. Next start: 714 Counter: 712

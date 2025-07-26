@@ -8,7 +8,8 @@
         "jgenderize/jersey-client-3.0.2.jar",
         "jgenderize/jaxrs-ri/**/*.jar",
         "commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4.jar",
-        "jgenderize/junit-jupiter-api-5.10.2.jar"
+        "jgenderize/junit-jupiter-api-5.10.2.jar",
+        "tess4j-5.16.0.jar"
     ],
     "java.project.sourcePaths": [
         ".history",

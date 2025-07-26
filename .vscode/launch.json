@@ -6,18 +6,46 @@
     "configurations": [
         {
             "type": "java",
-            "name": "InviteSender",
+            "name": "MailAdressGenerator",
             "request": "launch",
-            "mainClass": "InviteSender",
-            "args": "-n 10 -i 10 -c benin -u https://facebook.com",
-            "projectName": "AccountMail_c0a75267"
+            "mainClass": "MailAdressGenerator",
+            "projectName": "AccountMail_238e4a47"
+        },
+        {
+            "type": "java",
+            "name": "NameFlusher",
+            "request": "launch",
+            "mainClass": "NameFlusher",
+            "projectName": "AccountMail_238e4a47"
         },
         {
             "type": "java",
             "name": "Connect",
             "request": "launch",
             "mainClass": "Connect",
-            "args": "-n 10 -i 454 -c benin -u https://facebook.com",
+            "args": "-n 10 -i 714 -c benin -u https://facebook.com/",
+            "projectName": "AccountMail_238e4a47"
+        },
+        {
+            "type": "java",
+            "name": "Account",
+            "request": "launch",
+            "mainClass": "Account",
+            "projectName": "AccountMail_c0a75267"
+        },
+        {
+            "type": "java",
+            "name": "InviteSendRunner",
+            "request": "launch",
+            "mainClass": "InviteSendRunner",
+            "projectName": "AccountMail_c0a75267"
+        },
+        {
+            "type": "java",
+            "name": "InviteSender",
+            "request": "launch",
+            "mainClass": "InviteSender",
+            "args": "-n 10 -i 0 -c belgique -u https://www.facebook.com/photo?fbid=1688268258709724&set=a.115486169321282",
             "projectName": "AccountMail_c0a75267"
         },
         {
@@ -46,7 +74,7 @@
             "name": "InviteSendRunner",
             "request": "launch",
             "mainClass": "InviteSendRunner",
-            "args": "-n 0 -i 372 -u https://facebook.com/mediadubenin",
+            "args": "-n 0 -i 10 -c benin -u https://google.com/",
             "projectName": "Account-Mail_5276d4f4"
         },
         {
